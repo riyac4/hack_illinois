@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
+//Created with the help of ChatGPT
+
 function Schedule() {
   const [data, setData] = useState(null);
 
@@ -34,17 +36,16 @@ function Schedule() {
   };
 
   const getDateColor = date => {
-    // Define specific background colors for certain dates
     const dateColors = {
-      'Feb 24, 2023': 'hsl(0, 70%, 80%)',
-      'Feb 25, 2023': 'hsl(30, 70%, 80%)',
-      'Feb 26, 2023': 'hsl(90, 70%, 80%)',
+      'Feb 24, 2023': '#d62828',
+      'Feb 25, 2023': '#f77f00',
+      'Feb 26, 2023': '#fca311',
     };
 
-    return dateColors[date] || 'hsl(120, 70%, 80%)'; // Default color (green)
+    return dateColors[date] || 'hsl(120, 70%, 80%)';
   };
 
-  // Separate events by day
+
   const fridayEvents = data
   ? data.events
       .filter(event => formatDate(event.startTime) === 'Feb 24, 2023')
