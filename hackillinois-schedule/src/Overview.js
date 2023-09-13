@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Schedule from "./Schedule";
+import logo from './logo1.svg';
 
 function Overview() {
   const [data, setData] = useState(null);
@@ -59,7 +60,10 @@ function Overview() {
     <div className="container mt-4">
       <div className="row">
         <div className="col-md-12 mb-4">
-          <h3>HackIllinois Schedule</h3>
+        <img src={logo} alt="Description of the image" />
+
+          <h3 className="pt-2">
+            Schedule</h3>
           <button
             className={`btn ${
               selectedDay === "Friday" ? "btn-primary" : "btn-secondary"
